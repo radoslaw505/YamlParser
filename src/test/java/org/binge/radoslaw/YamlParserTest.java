@@ -1,20 +1,24 @@
 package org.binge.radoslaw;
 
 import org.binge.radoslaw.repositories.DatabaseConfig;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 import java.io.IOException;
 import java.util.ArrayList;
 
-import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.*;
 
-public class YamlParserTest {
+class YamlParserTest {
 
     private YamlParser yamlParser = new YamlParser();
+    private DatabaseConfig dbConfig = yamlParser.parseDbConfig();
+
+    YamlParserTest() throws IOException {
+    }
 
     @Test
-    public void testParsingYaml() throws IOException {
-        DatabaseConfig dbConfig = yamlParser.parseDbConfig();
+    public void testParsingYaml() {
         assertEquals(dbConfig.getClass().getTypeName(), DatabaseConfig.class.getTypeName());
         assertEquals("test", dbConfig.getDatabaseUser());
         assertEquals("test123", dbConfig.getDatabasePassword());
@@ -24,9 +28,8 @@ public class YamlParserTest {
 
     @Test
     public void testParsedMainDatabase() {
-
+        assertEquals(1, dbConfig.getMainDatabaseServerId());
+        assertEquals("jdbc:mysql://192.168.1.10/MAIN", dbConfig.getMainDatabaseUrl());
     }
-
-
 
 }
