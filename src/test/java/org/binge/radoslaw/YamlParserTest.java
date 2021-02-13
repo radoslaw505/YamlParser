@@ -19,11 +19,11 @@ class YamlParserTest {
 
     @Test
     public void testParsingYaml() {
-        assertEquals(dbConfig.getClass().getTypeName(), DatabaseConfig.class.getTypeName());
+        assertEquals(DatabaseConfig.class.getTypeName(), dbConfig.getClass().getTypeName());
         assertEquals("test", dbConfig.getDatabaseUser());
         assertEquals("test123", dbConfig.getDatabasePassword());
-        assertEquals(dbConfig.getMainDatabase().getClass().getTypeName(), ArrayList.class.getTypeName());
-        assertEquals(dbConfig.getSupportDatabase().getClass().getTypeName(), ArrayList.class.getTypeName());
+        assertEquals(ArrayList.class.getTypeName(), dbConfig.getMainDatabase().getClass().getTypeName());
+        assertEquals(ArrayList.class.getTypeName(), dbConfig.getSupportDatabase().getClass().getTypeName());
     }
 
     @Test
