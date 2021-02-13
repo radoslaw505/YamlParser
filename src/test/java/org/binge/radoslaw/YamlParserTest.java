@@ -22,7 +22,10 @@ public class YamlParserTest {
         assertEquals(dbConfig.getSupportDatabase().getClass().getTypeName(), ArrayList.class.getTypeName());
     }
 
+    @Test
+    public void testParsedMainDatabase() {
 
+    }
 
 
 

@@ -9,15 +9,8 @@ public class MainDatabase {
         return serverId;
     }
 
-    public void setServerId(int serverId) {
-        this.serverId = serverId;
-    }
-
     public String getUrl() {
         return url;
     }
 
-    public void setUrl(String url) {
-        this.url = url;
-    }
 }

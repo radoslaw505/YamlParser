@@ -9,35 +9,29 @@ public class DatabaseConfig {
     private List<MainDatabase> mainDatabase;
     private List<SupportDatabase> supportDatabase;
 
+
     public String getDatabaseUser() {
         return databaseUser;
-    }
-
-    public void setDatabaseUser(String databaseUser) {
-        this.databaseUser = databaseUser;
     }
 
     public String getDatabasePassword() {
         return databasePassword;
     }
 
-    public void setDatabasePassword(String databasePassword) {
-        this.databasePassword = databasePassword;
-    }
-
     public List<MainDatabase> getMainDatabase() {
         return mainDatabase;
     }
 
-    public void setMainDatabase(List<MainDatabase> mainDatabase) {
-        this.mainDatabase = mainDatabase;
+    public int getMainDatabaseServerId() {
+        return mainDatabase.get(0).getServerId();
+    }
+
+    public String getMainDatabaseUrl() {
+        return mainDatabase.get(0).getUrl();
     }
 
     public List<SupportDatabase> getSupportDatabase() {
         return supportDatabase;
     }
 
-    public void setSupportDatabase(List<SupportDatabase> supportDatabaseList) {
-        this.supportDatabase = supportDatabaseList;
-    }
 }
