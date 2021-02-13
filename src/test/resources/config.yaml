@@ -1,0 +1,14 @@
+databaseUser: test
+databasePassword: test123
+
+mainDatabase:
+  - serverId: 1
+    url: jdbc:mysql://192.168.1.10/MAIN
+
+supportDatabases:
+  - serverId: 2
+    url: jdbc:mysql://192.168.1.12/SUP1
+  - serverId: 3
+    url: jdbc:mysql://192.168.3.20/SUP2
+  - serverId: 4
+    url: jdbc:mysql://192.168.3.22/SUP3
