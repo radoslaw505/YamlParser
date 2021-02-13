@@ -1,9 +1,11 @@
 package org.binge.radoslaw;
 
+import org.binge.radoslaw.repositories.DatabaseConfig;
+
 public class YamlParser {
 
-    public static void main(String[] args) {
-        System.out.println("Hello");
-    }
+    DatabaseConfig dbConfig = new DatabaseConfig();
+
+
 
 }
