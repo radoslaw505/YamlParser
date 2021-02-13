@@ -7,7 +7,7 @@ public class DatabaseConfig {
     private String databaseUser;
     private String databasePassword;
     private List<MainDatabase> mainDatabase;
-    private List<SupportDatabase> supportDatabaseList;
+    private List<SupportDatabase> supportDatabase;
 
     public String getDatabaseUser() {
         return databaseUser;
@@ -33,11 +33,11 @@ public class DatabaseConfig {
         this.mainDatabase = mainDatabase;
     }
 
-    public List<SupportDatabase> getSupportDatabaseList() {
-        return supportDatabaseList;
+    public List<SupportDatabase> getSupportDatabase() {
+        return supportDatabase;
     }
 
-    public void setSupportDatabaseList(List<SupportDatabase> supportDatabaseList) {
-        this.supportDatabaseList = supportDatabaseList;
+    public void setSupportDatabase(List<SupportDatabase> supportDatabaseList) {
+        this.supportDatabase = supportDatabaseList;
     }
 }

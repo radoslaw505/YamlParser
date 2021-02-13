@@ -8,17 +8,12 @@ import java.io.IOException;
 
 public class YamlParser {
 
-    public static void main(String[] args) throws IOException {
-        DatabaseConfig databaseConfig = new YamlParser().parseDbConfig();
-        System.out.println(databaseConfig);
-    }
-
     private String yamlFile = "config.yaml";
 
     public DatabaseConfig parseDbConfig() throws IOException {
         ObjectMapper mapper = new ObjectMapper(new YAMLFactory());
         mapper.findAndRegisterModules();
-        return mapper.readValue(YamlParser.class.getResource(yamlFile), DatabaseConfig.class);
+        return mapper.readValue(YamlParser.class.getClassLoader().getResource(yamlFile), DatabaseConfig.class);
     }
 
 
